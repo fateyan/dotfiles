@@ -1,0 +1,18 @@
+""""""""""""""""""""""
+" fateyan's setting
+""""""""""""""""""""""
+nmap <C-l> :!tree -L 2 -C \| less <CR>
+syntax on
+set nocompatible
+set backspace=2
+set hls
+set cursorline
+set background=dark
+set t_Co=256
+set laststatus=2
+set smarttab
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set nu
+colorscheme elflord
