@@ -2,6 +2,8 @@
 " Vundle default setting
 """"""""""""""""""""""""""
 
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -13,12 +15,15 @@ call vundle#begin()
 Plugin 'bling/vim-airline'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tpope/vim-markdown'
-Plugin 'majutsushi/tagbar'
 Plugin 'kien/ctrlp.vim'
-Plugin 'skammer/vim-css-color'
-Plugin 'tobyS/pdv'
 Plugin 'scrooloose/nerdtree'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'vim-scripts/cscope.vim'
+Plugin 'wesleyche/Trinity'
 Plugin 'scrooloose/syntastic'
+Plugin 'spolu/dwm.vim'
+Plugin 'majutsushi/tagbar'
+let g:syntastic_python_checker_args='--disable=C0111'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -40,11 +45,10 @@ set tabstop=4
 set shiftwidth=4
 set cursorline
 set nu
-let g:tagbar_ctags_bin = 'ctags'
-let g:tagbar_width = 30
 nmap <C-F1> :TagbarToggle<CR>
 nmap <C-F2> :NERDTreeToggle<CR>
 nmap <ESC>[1;2P :TagbarToggle<CR>
 nmap <ESC>[1;2Q :NERDTreeToggle<CR>
-colorscheme jellybeans
+nmap <C-@> :call DWM_Focus()<CR>
+colorscheme atom
 
