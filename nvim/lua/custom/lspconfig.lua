@@ -1,0 +1,50 @@
+-- local M = {}
+--
+-- M.setup_lsp = function(attach, capabilities)
+--    local lsp_installer = require "nvim-lsp-installer"
+--
+--    lsp_installer.settings {
+--       ui = {
+--          icons = {
+--             server_installed = "﫟" ,
+--             server_pending = "",
+--             server_uninstalled = "✗",
+--          },
+--       },
+--    }
+--
+--    lsp_installer.on_server_ready(function(server)
+--       -- for support format on save
+--       my_on_attach = function(client, bufnr)
+--         vim.cmd "autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()"
+--         attach(client, bufnr)
+--       end
+--
+--       local opts = {
+--          on_attach = my_on_attach,
+--          capabilities = capabilities,
+--          flags = {
+--             debounce_text_changes = 150,
+--          },
+--          settings = {},
+--       }
+--
+--       if server == "pyright" then
+--         opts.settings = {
+--           python = {
+--             analysis = {
+--               autoSearchPaths = true,
+--               diagnosticMode = "workspace",
+--               useLibraryCodeForTypes = true,
+--               typeCheckingMode = "off"
+--             }
+--           }
+--         }
+--       end
+--
+--       server:setup(opts)
+--       vim.cmd [[ do User LspAttachBuffers ]]
+--    end)
+-- end
+--
+-- return M
